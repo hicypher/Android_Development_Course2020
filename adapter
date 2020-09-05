@@ -1,0 +1,24 @@
+
+            val ulist = ItemInfo()
+            ulist.title="All read for now, Refresh or Swipe Right for more"
+            ulist.description=   "We are improving daily...\nStay Safe - Stay Healthy :)"
+            ulist.author="NewsXS"
+            ulist.time="Just Now"
+            ulist.body="Thanks for joining , We wish you very good and productive day\nWe are improving daily..."
+            ulist.image="https://image.freepik.com/free-vector/stay-home-safe-motivational-background-concept_1017-24649.jpg"
+            ulist.link="https://hicypher.ueniweb.com/"
+            datalistZero.add(ulist)
+            
+            ///// send to adapter
+            
+               try {
+            recyclerViewZero.invalidate()
+        recyclerViewZero.setHasFixedSize(false)
+        manager = LinearLayoutManager(context) as RecyclerView.LayoutManager
+        recyclerViewZero.layoutManager = manager
+        recyclerAdapterItemInfoZero = RecyclerAdapterItemInfozero(datalistZeroT,context!!)
+        recyclerViewZero.adapter = recyclerAdapterItemInfoZero}
+        catch (e:Exception){
+            e.printStackTrace()
+           // Toast.makeText(context,"Please REFRESH",Toast.LENGTH_LONG).show()
+        }
